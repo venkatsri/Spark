@@ -1,0 +1,16 @@
+    It's a cluster computing framework for large-scale data processing. Spark does not use MapReduce as an execution engine; Instead, it uses its own distributed runtime for executing work on cluster.
+
+Spark is closely integrated with Hadoop. It can run on YARN and works with Hadoop file format and storage backends like HDFS.
+
+Spark is known for its ability to keep large datasets in memory between jobs. This capability allows Spark to outperform the equivalent MapReduce workflow, where datasets are always loaded from disk. 
+
+Two style of application that benefit from Spark processing model are iterative algorithm and interactive algorithm.
+	1. Iterative Algorithm - where a function is applied to a dataset repeatedly until an exit condition is met.
+	2. Interactive Algorithm - where user issues a series of ad hoc exploratory queries on dataset.
+
+Resilient Distributed Dataset (RDD)
+	There are two transformation that can be applied onto the RDDs. Namely 
+		a. Narrow transformation 
+		b. Wide transformation
+Narrow Transformation - doesn't require the data to be shuffled across the partitions. For ex. Map, Filter
+Wide Transformation - require the data to be shuffled. For ex. reduceByKey() 
