@@ -1,16 +1,45 @@
-    It's a cluster computing framework for large-scale data processing. Spark does not use MapReduce as an execution engine; Instead, it uses its own distributed runtime for executing work on cluster.
+    It's a cluster computing framework for large-scale data processing. Spark does not use MapReduce as an execution engine; 
+Instead, it uses its own distributed runtime for executing work on cluster.
 
 Spark is closely integrated with Hadoop. It can run on YARN and works with Hadoop file format and storage backends like HDFS.
 
-Spark is known for its ability to keep large datasets in memory between jobs. This capability allows Spark to outperform the equivalent MapReduce workflow, where datasets are always loaded from disk. 
+Spark is known for its ability to keep large datasets in memory between jobs. This capability allows Spark to outperform the equivalent 
+MapReduce workflow, where datasets are always loaded from disk. 
+
+Spark Features::
+1.Speed
+2.Advanced Analytics
+3.In-Memory Computation
+4.Hadoop Integration
+5.Machine Learning
 
 Two style of application that benefit from Spark processing model are iterative algorithm and interactive algorithm.
 	1. Iterative Algorithm - where a function is applied to a dataset repeatedly until an exit condition is met.
 	2. Interactive Algorithm - where user issues a series of ad hoc exploratory queries on dataset.
 
-Resilient Distributed Dataset (RDD)
+Resilient Distributed Dataset (RDD) Imutable::
 	There are two transformation that can be applied onto the RDDs. Namely 
 		a. Narrow transformation 
 		b. Wide transformation
 Narrow Transformation - doesn't require the data to be shuffled across the partitions. For ex. Map, Filter
 Wide Transformation - require the data to be shuffled. For ex. reduceByKey() 
+
+-->Transformation (DAG)
+-->Action (Lazy Evaluation)
+
+Spark Ecosystem::
+1. Spark Core
+2. Spark Streaming
+3. MLlib (Machine Learning)
+4. GraphX
+5. SparkR
+
+Spark Core::
+ It is the base engine for large-scale parallel and distributed data processing. It is responsible for 
+ 	1. Memory management and fault recovery.
+	2. Scheduling, distributing and monitoring jobs on a cluster.
+	3. Interacting with storage system.
+	
+	
+	https://s3.amazonaws.com/files.dezyre.com/images/blog/Apache+Spark+Architecture+Explained+in+Detail/Spark+Architecture+Diagram.png
+	
