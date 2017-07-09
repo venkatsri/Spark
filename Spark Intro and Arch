@@ -40,6 +40,6 @@ Spark Core::
 	2. Scheduling, distributing and monitoring jobs on a cluster.
 	3. Interacting with storage system.
 	
-	
-	https://s3.amazonaws.com/files.dezyre.com/images/blog/Apache+Spark+Architecture+Explained+in+Detail/Spark+Architecture+Diagram.png
-	
+Spark Architecture::
+
+
