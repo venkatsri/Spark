@@ -1,0 +1,19 @@
+Resilient Distributed Dataset (RDD) Imutable::
+  RDD is simply a distributed collection of elements. In spark all work is expressed as either creating new RDDs, tranforming existing RDDs, or calling operations on RDDs to compute result. Each RDD is split into multiple partitions, which may be computed on different nodes of the cluster.
+  
+  Create RDDs in two ways::
+    1.By loading an external dataset (eg. sc.textFile("filename"))
+    2.By distributing a collection of objects (eg. list or set)
+  
+  RDD offers two type of operations::
+   1. Transformation (DAG)
+   2. Action (Lazy Evaluation)
+  
+  Transformation::
+    Transformation constructs a new RDD from previous one. (eg. filter(), flatMap(), map(), mapPartitions(), reduceByKey())
+	There are two transformation that can be applied onto the RDDs. Namely 
+		a. Narrow transformation 
+		b. Wide transformation
+Narrow Transformation - doesn't require the data to be shuffled across the partitions. (eg. Map, Filter)
+Wide Transformation - require the data to be shuffled. (eg. reduceByKey())
+
