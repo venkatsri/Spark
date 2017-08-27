@@ -17,16 +17,6 @@ Two style of application that benefit from Spark processing model are iterative 
 	1. Iterative Algorithm - where a function is applied to a dataset repeatedly until an exit condition is met.
 	2. Interactive Algorithm - where user issues a series of ad hoc exploratory queries on dataset.
 
-Resilient Distributed Dataset (RDD) Imutable::
-	There are two transformation that can be applied onto the RDDs. Namely 
-		a. Narrow transformation 
-		b. Wide transformation
-Narrow Transformation - doesn't require the data to be shuffled across the partitions. For ex. Map, Filter
-Wide Transformation - require the data to be shuffled. For ex. reduceByKey() 
-
--->Transformation (DAG)
--->Action (Lazy Evaluation)
-
 Spark Ecosystem::
 1. Spark Core
 2. Spark Streaming
