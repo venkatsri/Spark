@@ -17,3 +17,6 @@ Resilient Distributed Dataset (RDD) Imutable::
 Narrow Transformation - doesn't require the data to be shuffled across the partitions. (eg. Map, Filter)
 Wide Transformation - require the data to be shuffled. (eg. reduceByKey())
 
+  Actions::
+    Actions are the operations that returns a final value to the driver program or write data to an external system.
+Transforamtion on RDDs are lazily evaluated, i.e spark will not begin to execute untill it sees an action. (eg. count(), take(), collect())
